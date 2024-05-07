@@ -33,11 +33,11 @@
 ```bash
 # Yarn
 yarn add react-native-svg
-yarn add react-native-iconfont-cli --dev
+yarn add @sj-distributor/react-native-iconfont-cli --dev
 
 # Npm
 npm install react-native-svg
-npm install react-native-iconfont-cli --save-dev
+npm install @sj-distributor/react-native-iconfont-cli --save-dev
 ```
 
 # Step 2
@@ -57,7 +57,7 @@ cd ios && pod install
 生成配置文件
 
 ```bash
-npx iconfont-init
+npx sj-iconfont-init
 ```
 
 此时项目根目录会生成一个`iconfont.json`的文件，内容如下：
@@ -114,7 +114,7 @@ npx iconfont-init
 开始生成 React-Native 标准组件
 
 ```bash
-npx iconfont-rn
+npx sj-iconfont-rn
 ```
 
 生成后查看您设置的保存目录中是否含有所有的图标，你可以参考[snapshots 目录](https://github.com/iconfont-cli/react-native-iconfont-cli/tree/master/snapshots)的快照文件，以区分不同模式下的图标结构。
@@ -195,7 +195,7 @@ export const App = () => {
 
 ```bash
 # 修改 symbol_url 配置后执行：
-npx iconfont-rn
+npx sj-iconfont-rn
 ```
 
 欢迎使用，并给我一些反馈和建议，让这个库做的更好
