@@ -1,7 +1,7 @@
 /* eslint-disable */
 
-import React from 'react';
-import { SvgCss } from 'react-native-svg';
+import React from "react";
+import { SvgCss } from "react-native-svg";
 
 const xml = `
 <svg xmlns="http://www.w3.org/2000/svg">
@@ -17,16 +17,10 @@ const xml = `
   </style>
   <circle cx="40" cy="40" r="24"/>
 </svg>
-`
+`;
 
-let IconInlineStyle = ({ size, color, ...rest }) => {
-  return (
-    <SvgCss xml={xml}  width={size} height={size} {...rest} />
-  );
-};
-
-IconInlineStyle.defaultProps = {
-  size: 18,
+let IconInlineStyle = ({ size = 18, color, ...rest }) => {
+  return <SvgCss xml={xml} width={size} height={size} {...rest} />;
 };
 
 IconInlineStyle = React.memo ? React.memo(IconInlineStyle) : IconInlineStyle;

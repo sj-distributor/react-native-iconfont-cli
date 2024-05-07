@@ -1,7 +1,7 @@
 /* eslint-disable */
 
-import React from 'react';
-import { SvgCss } from 'react-native-svg';
+import React from "react";
+import { SvgCss } from "react-native-svg";
 
 const xml = `
 <svg xmlns="http://www.w3.org/2000/svg">
@@ -23,16 +23,10 @@ const xml = `
   <circle class="myGreen" cx="40" cy="40" r="24"/>
   <circle class="myRed" cx="40" cy="100" r="24"/>
 </svg>
-`
+`;
 
-let IconClassSvg = ({ size, color, ...rest }) => {
-  return (
-    <SvgCss xml={xml}  width={size} height={size} {...rest} />
-  );
-};
-
-IconClassSvg.defaultProps = {
-  size: 18,
+let IconClassSvg = ({ size = 18, color, ...rest }) => {
+  return <SvgCss xml={xml} width={size} height={size} {...rest} />;
 };
 
 IconClassSvg = React.memo ? React.memo(IconClassSvg) : IconClassSvg;
